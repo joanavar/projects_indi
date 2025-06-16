@@ -20,7 +20,7 @@
     <h2>Tareas:</h2>
     <ul>
         {% for tarea in tareas %}
-            <li>{{ tarea }}</li>
+            <li>{{ tarea.descripcion }}</li>
         {% else %}
             <p>No hay tareas.</p>
         {% endfor %}
