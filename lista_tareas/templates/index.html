@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Lista de Tareas</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: auto; padding: 30px; }
+        input, button { margin: 5px 0; padding: 8px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+
+    <form method="POST">
+        <input type="text" name="tarea" placeholder="Nueva tarea">
+        <button type="submit" name="accion" value="agregar">Agregar</button>
+        <button type="submit" name="accion" value="Borrar_todo">Borrar Todo</button>
+    </form>
+
+    <h2>Tareas:</h2>
+    <ul>
+        {% for tarea in tareas %}
+            <li>{{ tarea }}</li>
+        {% else %}
+            <p>No hay tareas.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
