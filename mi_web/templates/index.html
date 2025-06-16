@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Piedra, Papel o Tijeras</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 40px; }
+        button { padding: 10px 20px; margin: 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>¡Piedra, Papel o Tijeras!</h1>
+    <form method="POST">
+        <button type="submit" name="jugada" value="Piedra">🪨 Piedra</button>
+        <button type="submit" name="jugada" value="Papel">📄 Papel</button>
+        <button type="submit" name="jugada" value="Tijeras">✂️ Tijeras</button>
+    </form>
+
+    {% if resultado %}
+        <p><strong>Resultado:</strong> {{ resultado }}</p>
+        <p>Tú elegiste: {{ jugador }} | IA eligió: {{ ia }}</p>
+        <p>Puntaje - Jugador: {{ puntos_jugador }} | IA: {{ puntos_ia }}</p>
+    {% endif %}
+</body>
+</html>
